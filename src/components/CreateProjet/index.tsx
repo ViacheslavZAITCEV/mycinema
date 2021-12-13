@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Button, Input } from '../../components'
+import { Button, Input, InputText } from '../../components'
 import { light } from '../../theme'
 
 
@@ -37,9 +37,9 @@ function CreateProjet() {
 
 			<FormStyled>
 				<Input input={nom} setInput={setnom} />
-				<Input input={description} setInput={setdescription} />
+				<InputText input={description} setInput={setdescription} />
 				<Button
-					disabled={!nom && !description}
+					disabled={nom === '' || description === ''}
 					action={() => console.log('télécharger le fichier video')}
 				>
 					Upload video

@@ -9,7 +9,6 @@ function Button(props: any) {
 	const { action, primary, disabled, children } = props
 
 	const ButtonStyled = styled.button`
-justify-content : center;
 color: ${primary ? light.primary : light.disabled};
 background-color : ${light.background};
 border: solid;
@@ -24,7 +23,9 @@ border-radius: 15px;
 
 	return (
 		<ButtonStyled
-			onClick={() => action()}
+			onClick={
+				action ? () => action() : () => console.log('button is disabled')
+			}
 		>
 			{children}
 		</ButtonStyled>

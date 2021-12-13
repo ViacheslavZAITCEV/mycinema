@@ -7,7 +7,6 @@ import { Button } from '../../components'
 
 const HeaderStyled = styled.div`
 display : flex;
-flex-direction: row;
 justify-content: space-around;
 background-color: ${light.backgroundWhite};
 padding: 15px 0px 15px 0px;

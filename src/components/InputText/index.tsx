@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { SpaceProps } from "styled-system";
 import { light } from '../../theme'
 
-// type InputProps 
+function InputText(props: any) {
 
-function Input(props: any) {
+	const { input, setInput, width, height } = props
 
-	const { input, setInput } = props
-
-	const InputStyled = styled.input`
-		color: ${light.text};
+	const InputStyled = styled.textarea`
+	color: ${light.text};
+	width : ${width};
+	height : ${height};
 	background-color: ${light.background};
 	border : solid;
 	border-width: 2px;
@@ -25,12 +24,11 @@ function Input(props: any) {
 	return (
 		<InputStyled
 			value={input}
-			type='text'
 			onChange={(e) => setInput(e.target.value)}
 		/>
 	)
 }
 
-export { Input }
+export { InputText }
 
 
