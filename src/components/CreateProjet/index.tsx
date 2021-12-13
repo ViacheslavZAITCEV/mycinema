@@ -7,7 +7,9 @@ import { light } from '../../theme'
 const NewProjet = styled.div`
 width: 100%;
 display: flex;
+flex-direction: column;
 justify-content: space-around;
+align-items: center;
 `
 
 const H3Styled = styled.h3`
@@ -15,6 +17,9 @@ color: ${light.primary};
 `
 
 const FormStyled = styled.form`
+display: flex;
+flex-direction: column;
+min-width : 50%;
 color: ${light.primary};
 `
 
